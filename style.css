@@ -1,0 +1,43 @@
+:root{
+	--pink: #FAC8CD;
+	--purple: #D7BCC8;
+	--darkGreen: #495D63;
+	--green: #629677;
+	--font: 'Miniver', cursive;
+}
+.wrapper{
+	background-color: var(--pink);
+	padding: 2rem;
+	width: 50%;
+	border: 2px solid var(--green);
+	
+}
+body{
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	font-family: var(--font);
+	background-color: var(--purple);
+	color: white;
+}
+p{
+	color: var(--green);
+	font-size: 2rem;
+	border-bottom: 2px solid;
+	padding: 1rem;
+	width: 50%;
+}
+.toDo,
+.needs{
+	background-color: var(--purple);
+	border: 3px dotted var(--green);
+}
+.wrapper div{
+	padding: 1rem;
+	margin: 1rem;
+}
+ul{
+	list-style-image: url(https://img.icons8.com/fluency-systems-regular/20/000000/xbox-x.png);
+	cursor:pointer;
+}
