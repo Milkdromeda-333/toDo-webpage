@@ -1,4 +1,4 @@
-let needToDo = [
+let toDoList = [
 	"throw away trash",
 	"pack away outside clothes into a bin",
 	"put away decorations into decrations bag.",
@@ -6,25 +6,46 @@ let needToDo = [
 	"pack away other bathroom stuff for storage"
 ]
 
-function addListItem(toDo){
-	let listItem = document.createElement('li');
-	listItem.innerHTML = toDo;
-document.getElementById('append').appendChild(listItem);
-	listItem.addEventListener('click', function(){
-	listItem.remove();
-	});
-} // This function takes in a string and adds a list item element to the DOM and adds an event lister that, when clicked, removes the element.
+let needs = ["trash bags"];
 
-needToDo.forEach(addListItem); // this calls the function for each element in the array.
-
-addListItem('wash dishes'); // this adds a list item to he array and is directly added to the list on the DOM.
-
+/* STEP 1 event listener added to document and points to one of 
+two functions*/
 document.onkeydown = enterItem;
-
 function enterItem(button){
 	if(button.key === 'p') {
 	let addedItem = prompt('Enter your to do item');
 		addListItem(addedItem);
-		
-	};
-} // This function Has you to press p to add a new list iteem by checking if the value is P and then prompting for you to add your item and then sends it to the addItem function.
+	} else if (button.key === 'w'){
+			let neededItem = prompt('What do you need?');
+			addNeededItem(neededItem);
+		};
+	}
+
+/* TO DO ITEMS PROGRAM
+This function takes in a string from the event listener enterItem and 
+adds a list item element to the DOM and adds an event lister that, 
+when clicked, removes the element.*/
+function addListItem(toDo){
+	let listItem = document.createElement('li');
+	listItem.innerHTML = toDo;
+	toDoList.push(listItem);
+document.getElementById('append').appendChild(listItem);
+	listItem.addEventListener('click', function(){
+	listItem.remove();
+	});
+} 
+/* NEEDS PROGRAM
+This function does the same as addListItem but for the needs list*/
+function addNeededItem(neededItem){
+ 	let listItem = document.createElement('li');
+	listItem.innerHTML = neededItem;
+	document.getElementById('neededList').appendChild(listItem);
+	needs.push(neededItem);
+	listItem.addEventListener('click', ()=> listItem.remove())
+	
+ }
+/* These two statements runs each element in the arrays through
+their respective functions*/
+toDoList.forEach(addListItem);
+needs.forEach(addNeededItem);
+
