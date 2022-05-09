@@ -1,22 +1,38 @@
+<!DOCTYPE html>
+
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>To do List</title>
+  <meta name="theme-color" content="#8447FF">
+  <!-- Below are the fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" rel="stylesheet">
+  <!-- Below are the favicon icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
 </head>
 
-<div class="wrapper">
-	<div class="toDo">
-		<p>to do list:</p>
-		<button id="toDoReset">Reset</button>
-		<p>(Press p to add a new item!)</p>
-<ul id="append"></ul> <!-- This is where I will insert the list items -->
-		
-	</div>
-	<div class="needs">
-		<p>Needs:</p>
-		<button id="needsReset">Reset</button>
-		<p>(Press w to add a new item!)</p>
-		<ul id="neededList"></ul> 
-<!-- This is where I will insert the list items -->
-	</div>
-</div>
+<body>
+  <div class="wrapper">
+    <div class="toDo">
+      <p>to do list:</p>
+      <button id="toDoReset">Reset</button>
+      <p>(Press p to add a new item!)</p>
+      <ul id="append"></ul> <!-- This is where I will insert the list items -->
+
+    </div>
+    <div class="needs">
+      <p>Needs:</p>
+      <button id="needsReset">Reset</button>
+      <p>(Press w to add a new item!)</p>
+      <ul id="neededList"></ul>
+      <!-- This is where I will insert the list items -->
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
