@@ -1,12 +1,12 @@
 :root{
-	--pink: #FAC8CD;
-	--purple: #D7BCC8;
-	--darkGreen: #495D63;
-	--green: #629677;
+	--cream: #FFFFE8;
+	--green: #8CFFDA;
+	--purple: #8447FF;
+	--pink: #D972FF;
 	--font: 'Miniver', cursive;
 }
 .wrapper{
-	background-color: var(--pink);
+	background-color: var(--cream);
 	padding: 2rem;
 	width: 50%;
 	border: 2px solid var(--green);
@@ -16,13 +16,13 @@ body{
 	margin: 1rem;
 	display: flex;
 	justify-content: center;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: var(--font);
-	background-color: var(--purple);
-	color: white;
+	background-color: var(--green);
+	color: black;
 }
 p{
-	color: var(--green);
+	color: var(--purple);
 	font-size: 2rem;
 	border-bottom: 2px solid;
 	padding: 1rem;
@@ -30,7 +30,7 @@ p{
 }
 .toDo,
 .needs{
-	background-color: var(--purple);
+	background-color: var(--darkGreen);
 	border: 3px dotted var(--green);
 }
 .wrapper div{
@@ -39,5 +39,17 @@ p{
 }
 ul{
 	list-style-image: url(https://img.icons8.com/fluency-systems-regular/20/000000/xbox-x.png);
+	list-style-position: outside;
 	cursor:pointer;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+li{
+	margin: .5rem;
+}
+
+li:hover{
+	color: red;
+	margin-left: 10px;
 }
