@@ -21,12 +21,18 @@ body{
 	background-color: var(--green);
 	color: black;
 }
-p{
+p:first-of-type{
 	color: var(--purple);
 	font-size: 2rem;
-	border-bottom: 2px solid;
-	padding: 1rem;
+	padding: 1rem 0 0 0;
 	width: 50%;
+	
+}
+p:last-of-type{
+	border-bottom: 2px solid var(--purple);
+}
+p{
+	margin: 0;
 }
 .toDo,
 .needs{
@@ -52,4 +58,20 @@ li{
 li:hover{
 	color: red;
 	margin-left: 10px;
+}
+button{
+	display: inline-block;
+	float: right;
+	border: none;
+	background-color: var(--purple);
+	color: var(--cream);
+	font-family: var(--font);
+	height: 2rem;
+	width: 4rem;
+	position: relative;
+	bottom: 1rem;
+}
+
+button:hover{
+	background-color: black;
 }
